@@ -1,7 +1,113 @@
 :root {
-    --color-primario: #FCBC3B;
-    --color-secundario: #E92F3D;
-    --color-background-sombra: #E92F3D30;
-    --color-background: #EFF6F5;
-    --text-default: 'Open Sans'
+     --color-primario: #e63946;  
+     --color-secundario: #f4a261; 
+     --color-texto: #333;         
+     --color-background-sombra: #E92F3D30;
+     --color-background: #EFF6F5;
+     --text-default: 'Open Sans'
+}
+
+
+#servicios {
+  height: 100vh;
+  background: #fff;
+  padding: 40px;
+}
+
+
+.servicios-titulos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.servicios-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 30px;
+  grid-template-areas:
+    "ingredientes imagen rapidez"
+    "calidad imagen delivery";
+}
+
+
+.ingredientes { grid-area: ingredientes; }
+.calidad { grid-area: calidad; }
+.rapidez { grid-area: rapidez; }
+.delivery { grid-area: delivery; }
+.imagen-central { 
+  grid-area: imagen; 
+  text-align: center;
+  transition: transform 0.5s ease;
+}
+.imagen-central:hover {
+  transform: scale(1.1);
+}
+
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.items span {
+  width: 95px;
+  font-size: 40px;
+  text-align: center;
+  padding: 20px;
+  color: var(--color-secundario);
+  border: 5px double #dedede;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.items span:hover {
+  background: var(--color-secundario);
+  color: #fff;
+}
+
+
+.ingredientes span,
+.calidad span {
+  color: var(--color-primario);
+}
+
+.ingredientes span:hover,
+.calidad span:hover {
+  background: var(--color-primario);
+  color: #fff;
+}
+
+.titulo-item {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.texto-item {
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  color: var(--color-texto);
+  padding: 0 20px;
+}
+
+#servicios {
+  height: 100vh;
+  background: var(--color-background);
+  padding: 40px;
+}
+
+.items span:hover {
+  background: var(--color-secundario);
+  color: #fff;
+  box-shadow: 0 0 15px var(--color-background-sombra);
 }
