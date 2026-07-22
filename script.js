@@ -1,9 +1,13 @@
-var contenedor = document.getElementById.querySelector(".slider");
+var  contenedor = document.querySelector('.slider'),
+     btnIzquierdo = document.getElementById("btn-izquierda"),
+     btnDerecho = document.getElementById("btn-derecha");
 
-var btnizquierda = document.getElementById("btn-izquierda");
+     
+     btnDerecho.addEventListener("click", function () {
+          contenedor.scrollLeft += contenedor.offsetWidth;  
+     });
 
-var btnderecha = document.getElementById("btn-derecha");
-
-btnderecha.addEventListener("click", function() {
-    contenedor.scrollLeft += contenedor.offsetWidth;
-});
+     
+     btnIzquierdo.addEventListener("click", function () {
+          contenedor.scrollLeft -= contenedor.offsetWidth;  
+     });
